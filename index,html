@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title>Янко Сакъзов 56В</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    body,h1,h2{
+        font-family: "Roboto", sans-serif
+    }
+    body, html {
+        height: 100%
+    }
+    p {
+        line-height: 2
+    }
+</style>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://raw.githubusercontent.com/padolsey-archive/jquery.fn/master/cross-domain-ajax/jquery.xdomainajax.js"></script>
+<body>
+
+    <!-- main -->
+    <div class="w3-container w3-padding-64 w3-light-grey w3-grayscale-min" id="us">
+      <div class="w3-center w3-content">
+        <!--<h1 class="w3-center w3-text-indigo"><b>Янко Сакъзов 56 В - Разходи</b></h1>-->
+        <p>
+            <div id="ys56"></div>
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-grey w3-padding-16">
+        <p>
+            <a href="mailto:&#109;&#105;&#116;&#107;&#107;&#111;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">КОНТАКТ</a>
+        </p>
+    </footer>
+    <div class="w3-hide-small" style="margin-bottom:32px"> </div>
+
+    <script>
+        $( document ).ready(function() {
+            
+            var url_dl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTe030PN2qgxf8on9EupiFdKKydyddbQuYplMibS4vd3kyjZcQDmmPxlS9C-7ctTbAKpBKjwxtPZ-G_/pubhtml?gid=1795872404&single=true";
+            
+            jQuery.get(url_dl, function( data ) {
+                $( "#ys56" ).html( data );
+                console.log("Data loaded.");
+            });
+
+        });
+    </script>
+</body>
+</html>
